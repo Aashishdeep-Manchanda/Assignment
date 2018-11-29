@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Assignment2&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">assignment2</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">
+package assignment2;
+
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+
+
+public class Game {
+    private String name;
+    private String platform;
+    private String genre;
+    private String size;
+    private LocalDate launchDate;
+    private String availability;
+
+<span class="fc" id="L17">    public Game(String name, String platform, String genre, String size, LocalDate launchDate, String availability) {</span>
+<span class="fc" id="L18">        setName(name);</span>
+<span class="fc" id="L19">        setPlatform (platform);</span>
+<span class="fc" id="L20">        setGenre(genre);</span>
+<span class="fc" id="L21">        setSize(size);</span>
+<span class="fc" id="L22">        setLaunchDate (launchDate);</span>
+<span class="fc" id="L23">        setAvailability(availability);</span>
+<span class="fc" id="L24">    }</span>
+
+    public String getName() {
+<span class="fc" id="L27">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">        if(!name.isEmpty())</span>
+<span class="fc" id="L32">            this.name = name;</span>
+        else
+<span class="nc" id="L34">            throw new IllegalArgumentException(&quot;Name of the game cannot be empty&quot;);</span>
+<span class="fc" id="L35">    }</span>
+
+    public String getPlatform() {
+<span class="fc" id="L38">        return platform;</span>
+    }
+
+    public void setPlatform(String platform) {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(!platform.isEmpty())</span>
+<span class="fc" id="L43">            this.platform = platform;</span>
+        else
+<span class="fc" id="L45">            throw new IllegalArgumentException(&quot;Platform cannot be empty. For example like PC,mobile,Web browser etc &quot;);</span>
+            
+<span class="fc" id="L47">    }</span>
+
+    public String getGenre() {
+<span class="fc" id="L50">        return genre;</span>
+    }
+
+    public void setGenre(String genre) {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if(!genre.isEmpty())</span>
+<span class="fc" id="L55">            this.genre = genre;</span>
+        else
+<span class="fc" id="L57">            throw new IllegalArgumentException(&quot;Genre of the game cannot be empty&quot;);</span>
+<span class="fc" id="L58">    }</span>
+
+    public String getSize() {
+<span class="fc" id="L61">        return size;</span>
+    }
+
+    public void setSize(String size) {
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if(!size.isEmpty())</span>
+<span class="fc" id="L66">            this.size = size;</span>
+        else
+<span class="fc" id="L68">            throw new IllegalArgumentException(&quot;size cannot be empty and must be integer&quot;);</span>
+<span class="fc" id="L69">    }</span>
+
+    public LocalDate getLaunchDate() {
+<span class="fc" id="L72">        return launchDate;</span>
+    }
+
+    public void setLaunchDate(LocalDate launchDate) {
+<span class="fc" id="L76">        int gamedate = Period.between(launchDate, LocalDate.now()).getYears();</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">       if(launchDate.isAfter(LocalDate.of(1990, Month.MARCH, 1))&amp;&amp;</span>
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">               launchDate.isBefore(LocalDate.now()))</span>
+<span class="fc" id="L79">         this.launchDate = launchDate;</span>
+               
+           else
+<span class="fc" id="L82">            throw new IllegalArgumentException(&quot;launch date must be greater than 1990 &quot;);</span>
+        
+<span class="fc" id="L84">    }</span>
+
+    public String getAvailability() {
+<span class="fc" id="L87">        return availability;</span>
+    }
+
+    public void setAvailability(String availability) {
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        if(!availability.isEmpty())</span>
+<span class="fc" id="L92">            this.availability = availability;</span>
+        else
+<span class="fc" id="L94">            throw new IllegalArgumentException(&quot;Availability &quot;);</span>
+<span class="fc" id="L95">    }</span>
+    
+    
+    
+
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
