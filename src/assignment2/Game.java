@@ -5,7 +5,10 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
-
+/**
+ * creating instance variable
+ * @author Owner
+ */
 public class Game {
     private String name;
     private String platform;
@@ -14,6 +17,15 @@ public class Game {
     private LocalDate launchDate;
     private String availability;
 
+    /**
+     * creating constructor for each of the instance variable
+     * @param name
+     * @param platform
+     * @param genre
+     * @param size
+     * @param launchDate
+     * @param availability 
+     */
     public Game(String name, String platform, String genre, String size, LocalDate launchDate, String availability) {
         setName(name);
         setPlatform (platform);
@@ -22,7 +34,10 @@ public class Game {
         setLaunchDate (launchDate);
         setAvailability(availability);
     }
-
+/**
+ * Using get and set method for name
+ * @return 
+ */
     public String getName() {
         return name;
     }
@@ -33,6 +48,11 @@ public class Game {
         else
             throw new IllegalArgumentException("Name of the game cannot be empty");
     }
+    
+    /**
+     * USing get and set method for platform
+     * @return 
+     */
 
     public String getPlatform() {
         return platform;
@@ -46,6 +66,10 @@ public class Game {
             
     }
 
+    /**
+     * using get and set method for genre
+     * @return 
+     */
     public String getGenre() {
         return genre;
     }
@@ -56,6 +80,10 @@ public class Game {
         else
             throw new IllegalArgumentException("Genre of the game cannot be empty");
     }
+    /**
+     * using get and set method for size of the game
+     * @return 
+     */
 
     public String getSize() {
         return size;
@@ -67,6 +95,11 @@ public class Game {
         else
             throw new IllegalArgumentException("size cannot be empty and must be integer");
     }
+    
+    /**
+     * Using get and set method for launch date of game 
+     * @return 
+     */
 
     public LocalDate getLaunchDate() {
         return launchDate;
@@ -83,6 +116,10 @@ public class Game {
         
     }
 
+    /**
+     * Using get and set method for availability
+     * @return 
+     */
     public String getAvailability() {
         return availability;
     }
@@ -93,10 +130,5 @@ public class Game {
         else
             throw new IllegalArgumentException("Availability ");
     }
-    
-    
-    
-
-    
     
 }

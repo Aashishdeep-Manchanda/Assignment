@@ -5,7 +5,10 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
 
-
+/**
+ * creating instance variable
+ * @author Owner
+ */
 public class Game {
     private String name;
     private String platform;
@@ -14,90 +17,119 @@ public class Game {
     private LocalDate launchDate;
     private String availability;
 
-<span class="fc" id="L17">    public Game(String name, String platform, String genre, String size, LocalDate launchDate, String availability) {</span>
-<span class="fc" id="L18">        setName(name);</span>
-<span class="fc" id="L19">        setPlatform (platform);</span>
-<span class="fc" id="L20">        setGenre(genre);</span>
-<span class="fc" id="L21">        setSize(size);</span>
-<span class="fc" id="L22">        setLaunchDate (launchDate);</span>
-<span class="fc" id="L23">        setAvailability(availability);</span>
-<span class="fc" id="L24">    }</span>
-
+    /**
+     * creating constructor for each of the instance variable
+     * @param name
+     * @param platform
+     * @param genre
+     * @param size
+     * @param launchDate
+     * @param availability 
+     */
+<span class="fc" id="L29">    public Game(String name, String platform, String genre, String size, LocalDate launchDate, String availability) {</span>
+<span class="fc" id="L30">        setName(name);</span>
+<span class="fc" id="L31">        setPlatform (platform);</span>
+<span class="fc" id="L32">        setGenre(genre);</span>
+<span class="fc" id="L33">        setSize(size);</span>
+<span class="fc" id="L34">        setLaunchDate (launchDate);</span>
+<span class="fc" id="L35">        setAvailability(availability);</span>
+<span class="fc" id="L36">    }</span>
+/**
+ * Using get and set method for name
+ * @return 
+ */
     public String getName() {
-<span class="fc" id="L27">        return name;</span>
+<span class="fc" id="L42">        return name;</span>
     }
 
     public void setName(String name) {
-<span class="pc bpc" id="L31" title="1 of 2 branches missed.">        if(!name.isEmpty())</span>
-<span class="fc" id="L32">            this.name = name;</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if(!name.isEmpty())</span>
+<span class="fc" id="L47">            this.name = name;</span>
         else
-<span class="nc" id="L34">            throw new IllegalArgumentException(&quot;Name of the game cannot be empty&quot;);</span>
-<span class="fc" id="L35">    }</span>
+<span class="nc" id="L49">            throw new IllegalArgumentException(&quot;Name of the game cannot be empty&quot;);</span>
+<span class="fc" id="L50">    }</span>
+    
+    /**
+     * USing get and set method for platform
+     * @return 
+     */
 
     public String getPlatform() {
-<span class="fc" id="L38">        return platform;</span>
+<span class="fc" id="L58">        return platform;</span>
     }
 
     public void setPlatform(String platform) {
-<span class="fc bfc" id="L42" title="All 2 branches covered.">        if(!platform.isEmpty())</span>
-<span class="fc" id="L43">            this.platform = platform;</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if(!platform.isEmpty())</span>
+<span class="fc" id="L63">            this.platform = platform;</span>
         else
-<span class="fc" id="L45">            throw new IllegalArgumentException(&quot;Platform cannot be empty. For example like PC,mobile,Web browser etc &quot;);</span>
+<span class="fc" id="L65">            throw new IllegalArgumentException(&quot;Platform cannot be empty. For example like PC,mobile,Web browser etc &quot;);</span>
             
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L67">    }</span>
 
+    /**
+     * using get and set method for genre
+     * @return 
+     */
     public String getGenre() {
-<span class="fc" id="L50">        return genre;</span>
+<span class="fc" id="L74">        return genre;</span>
     }
 
     public void setGenre(String genre) {
-<span class="fc bfc" id="L54" title="All 2 branches covered.">        if(!genre.isEmpty())</span>
-<span class="fc" id="L55">            this.genre = genre;</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        if(!genre.isEmpty())</span>
+<span class="fc" id="L79">            this.genre = genre;</span>
         else
-<span class="fc" id="L57">            throw new IllegalArgumentException(&quot;Genre of the game cannot be empty&quot;);</span>
-<span class="fc" id="L58">    }</span>
+<span class="fc" id="L81">            throw new IllegalArgumentException(&quot;Genre of the game cannot be empty&quot;);</span>
+<span class="fc" id="L82">    }</span>
+    /**
+     * using get and set method for size of the game
+     * @return 
+     */
 
     public String getSize() {
-<span class="fc" id="L61">        return size;</span>
+<span class="fc" id="L89">        return size;</span>
     }
 
     public void setSize(String size) {
-<span class="fc bfc" id="L65" title="All 2 branches covered.">        if(!size.isEmpty())</span>
-<span class="fc" id="L66">            this.size = size;</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">        if(!size.isEmpty())</span>
+<span class="fc" id="L94">            this.size = size;   </span>
         else
-<span class="fc" id="L68">            throw new IllegalArgumentException(&quot;size cannot be empty and must be integer&quot;);</span>
-<span class="fc" id="L69">    }</span>
+<span class="fc" id="L96">            throw new IllegalArgumentException(&quot;size cannot be empty and must be integer&quot;);</span>
+<span class="fc" id="L97">    }</span>
+    
+    /**
+     * Using get and set method for launch date of game 
+     * @return 
+     */
 
     public LocalDate getLaunchDate() {
-<span class="fc" id="L72">        return launchDate;</span>
+<span class="fc" id="L105">        return launchDate;</span>
     }
 
     public void setLaunchDate(LocalDate launchDate) {
-<span class="fc" id="L76">        int gamedate = Period.between(launchDate, LocalDate.now()).getYears();</span>
-<span class="fc bfc" id="L77" title="All 2 branches covered.">       if(launchDate.isAfter(LocalDate.of(1990, Month.MARCH, 1))&amp;&amp;</span>
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">               launchDate.isBefore(LocalDate.now()))</span>
-<span class="fc" id="L79">         this.launchDate = launchDate;</span>
+<span class="fc" id="L109">        int gamedate = Period.between(launchDate, LocalDate.now()).getYears();</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">       if(launchDate.isAfter(LocalDate.of(1990, Month.MARCH, 1))&amp;&amp;</span>
+<span class="pc bpc" id="L111" title="1 of 2 branches missed.">               launchDate.isBefore(LocalDate.now()))</span>
+<span class="fc" id="L112">         this.launchDate = launchDate;</span>
                
            else
-<span class="fc" id="L82">            throw new IllegalArgumentException(&quot;launch date must be greater than 1990 &quot;);</span>
+<span class="fc" id="L115">            throw new IllegalArgumentException(&quot;launch date must be greater than 1990 &quot;);</span>
         
-<span class="fc" id="L84">    }</span>
+<span class="fc" id="L117">    }</span>
 
+    /**
+     * Using get and set method for availability
+     * @return 
+     */
     public String getAvailability() {
-<span class="fc" id="L87">        return availability;</span>
+<span class="fc" id="L124">        return availability;</span>
     }
 
     public void setAvailability(String availability) {
-<span class="fc bfc" id="L91" title="All 2 branches covered.">        if(!availability.isEmpty())</span>
-<span class="fc" id="L92">            this.availability = availability;</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if(!availability.isEmpty())</span>
+<span class="fc" id="L129">            this.availability = availability;</span>
         else
-<span class="fc" id="L94">            throw new IllegalArgumentException(&quot;Availability &quot;);</span>
-<span class="fc" id="L95">    }</span>
-    
-    
-    
-
-    
+<span class="fc" id="L131">            throw new IllegalArgumentException(&quot;Availability &quot;);</span>
+<span class="fc" id="L132">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
