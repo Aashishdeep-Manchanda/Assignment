@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.FavGameController">
+   <children>
+      <VBox layoutX="27.0" prefHeight="548.0" prefWidth="766.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="548.0" prefWidth="788.0" spacing="30.0">
+               <children>
+                  <FlowPane>
+                     <children>
+                        <FlowPane>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <VBox>
+                                                               <children>
+                                                                  <VBox>
+                                                                     <children>
+                                                                        <GridPane prefHeight="548.0" prefWidth="296.0">
+                                                                          <columnConstraints>
+                                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="101.0" />
+                                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="195.0" />
+                                                                          </columnConstraints>
+                                                                          <rowConstraints>
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                          </rowConstraints>
+                                                                           <children>
+                                                                              <Label text="Name" />
+                                                                              <Label text="Platform" GridPane.rowIndex="1" />
+                                                                              <Label text="Genre" GridPane.rowIndex="2" />
+                                                                              <Label text="Size" GridPane.rowIndex="3" />
+                                                                              <Label text="Launch Date" GridPane.rowIndex="4" />
+                                                                              <Label text="Availability" GridPane.rowIndex="5" />
+                                                                              <TextField fx:id="nameTextField" prefHeight="50.0" prefWidth="195.0" GridPane.columnIndex="1" />
+                                                                              <TextField fx:id="sizeTextField" prefHeight="54.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                              <DatePicker fx:id="launchDatePicker" prefHeight="53.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                              <FlowPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                                                 <children>
+                                                                                    <RadioButton fx:id="worldWideRadioButton" mnemonicParsing="false" text="WorldWide " />
+                                                                                    <RadioButton fx:id="domesticRadioButton" mnemonicParsing="false" text="Domestic" />
+                                                                                 </children>
+                                                                              </FlowPane>
+                                                                              <ComboBox fx:id="platformComboBox" prefHeight="58.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                              <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <VBox spacing="20.0">
+                     <children>
+                        <ImageView fx:id="genreImageView" fitHeight="200.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/mario.jpg" />
+                           </image></ImageView>
+                        <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerGamePushed" prefHeight="31.0" prefWidth="114.0" text="Register" />
+                        <Label fx:id="label" alignment="BOTTOM_RIGHT" prefHeight="21.0" prefWidth="114.0" text="Label" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

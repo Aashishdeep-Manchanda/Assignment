@@ -16,6 +16,7 @@ public class Game {
     private String size;
     private LocalDate launchDate;
     private String availability;
+   
 
     /**
      * creating constructor for each of the instance variable
@@ -129,6 +130,13 @@ public class Game {
             this.availability = availability;
         else
             throw new IllegalArgumentException("Availability ");
+        
     }
-    
+
+    @Override
+    public String toString() {
+        return "Game{" + "name=" + name + ", platform=" + platform + ", genre=" + genre + ", size=" + size + ", launchDate=" + launchDate + ", availability=" + availability + '}';
+    }
+
+  
 }
